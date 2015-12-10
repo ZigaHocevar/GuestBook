@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+    <link href="/assets/css/style.css" rel="stylesheet">
+    <title>Seznam vseh sporocil</title>
+</head>
+<body>
+    <h1>Seznam vseh sporočil</h1>
+    <hr>
+    <div class="col-md-12">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Avtor</th>
+                    <th>Email</th>
+                    <th>Sporočilo</th>
+                    <th>Nastanek</th>
+                </tr>
+            </thead>
+            {% for sporocilo in seznam %}
+            <tbody>
+                <tr>
+                    <td>{{ sporocilo.ime_in_priimek }}</td>
+                    <td>{{ sporocilo.email }}</td>
+                    <td>{{ sporocilo.sporocilo }}</td>
+                    <td>{{ sporocilo.nastanek }}</td>
+                    <td>
+                        <form method="post">
+                            <a class="btn btn-primary active" href="/sporocilo/{{ sporocilo.key.id() }}">Lastnosti sporočila</a>
+                        </form>
+                    </td>
+                </tr>
+            </tbody>
+            {% endfor %}
+        </table>
+    </div>
+    <div class="sredina">
+        <div class="col-md-12">
+            <a href="/" role="button" class="btn btn-info btn-lg">
+                <span class="glyphicon glyphicon-home" aria-hidden="true"></span> Domov
+            </a>
+        </div>
+    </div>
+</body>
+</html>

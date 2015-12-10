@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+    <link href="/assets/css/style.css" rel="stylesheet">
+    <title>Izbrisi sporocilo</title>
+</head>
+<body>
+    <h1>Izbris sporočila</h1>
+
+    <hr>
+    <div class="container-fluid">
+        <div class="col-md-4">
+            <h3>Ali si prepričan, da želiš izbrisati sporočilo?!</h3>
+
+            <form action="/sporocilo/{{ sporocilo.key.id() }}/izbrisi" method="post">
+                <button class="btn btn-danger" type="submit">Da</button>
+            </form>
+            <a href="/sporocilo/{{ sporocilo.key.id() }}" role="button" class="btn btn-success">
+                Ne
+            </a>
+        </div>
+    </div>
+</body>
+</html>

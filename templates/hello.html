@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <!-- Moj CSS style -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+    <title>GuestBook</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <h1>Filton´s GuestBook</h1>
+    </div>
+
+    <hr>
+
+    <div class="container-fluid">
+        <div class="col-md-6">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h1 class="panel-title"><strong>Knjiga gostov</strong></h1>
+                </div>
+            <div class="panel-body">
+                <form action="/rezultat" method="post">
+                    <div class="form-group">
+                        <label for="ime_in_priimek">Ime in Priimek</label>
+                        <input type="text" class="form-control" name="ime_in_priimek" id="ime_in_priimek" placeholder="Ime in priimek">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" name="email" id="email" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="sporocilo">Sporočilo <span style="color: red">*</span></label>
+                        <textarea type="text" name="sporocilo" id="sporocilo" class="form-control" rows="8" placeholder="Vpišite svoje sporočilo"></textarea>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> Strinjam se, da je Filton najboljša izbira zame
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-success">Pošlji</button>
+                    <button type="reset" class="btn btn-warning">Počisti</button>
+                </form>
+            </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <h3>Pozdravljeni,</h3>
+                    <p>Smo svetovno znana hotelska veriga Filton in za vse naše obiskovalce smo ustvarili spletno aplikacijo, kjer lahko
+                    pustite svoje sporočilo ali podate kakršnokoli mnenje o naših ponudbah in storitvah. Najlepša hvala, ker ste si vzeli
+                    čas za nas.</p>
+                    <br>
+                    <p><span style="color: red">*</span> - podatek je nujno potreben</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

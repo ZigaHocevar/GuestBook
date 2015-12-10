@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+    <link href="/assets/css/style.css" rel="stylesheet">
+    <title>Ureditev sporočila</title>
+</head>
+<body>
+    <h1>Uredi sporočilo</h1>
+    <hr>
+    <div class="contanier">
+        <div class="col-md-4">
+            <form action="/sporocilo/{{ sporocilo.key.id() }}/uredi" method="post">
+                <div class="form-group">
+                    <textarea name="sporocilo_uredi" id="sporocilo" class="form-control" rows="8">{{ sporocilo.sporocilo }}</textarea>
+                    <br>
+                    <button class="btn btn-success" type="submit">OK</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
